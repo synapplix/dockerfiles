@@ -14,7 +14,7 @@ It contains not play. You should provide your own play through the host on `/dat
 
 1. Install [Docker](https://www.docker.com/).
 
-2. Build the image from Dockerfile: `docker build -t="MY_BASE_NAME/MY_NAME[:MY_TAG]" https://raw.githubusercontent.com/synapplix/dockerfiles/master/play1docker/Dockerfile
+2. Build the image from Dockerfile: `docker build -t="MY_BASE_NAME/MY_NAME[:MY_TAG]" https://raw.githubusercontent.com/synapplix/dockerfiles/master/play1docker/Dockerfile`
 
 #### Example image build
 
