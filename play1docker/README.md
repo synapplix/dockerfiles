@@ -14,11 +14,11 @@ It contains not play. You should provide your own play through the host on `/dat
 
 1. Install [Docker](https://www.docker.com/).
 
-2. Build the image from Dockerfile: `docker build -t="MY_BASE_NAME/MY_NAME[:MY_TAG]" raw.githubusercontent.com/synapplix/dockerfiles/master/play1/Dockerfile`
+2. Build the image from Dockerfile: `docker build -t="MY_BASE_NAME/MY_NAME[:MY_TAG]" https://raw.githubusercontent.com/synapplix/dockerfiles/master/play1docker/Dockerfile
 
-#### Build a rica image
+#### Example image build
 
-    docker build -t="play1docker" raw.githubusercontent.com/synapplix/dockerfiles/master/play1/Dockerfile
+    docker build -t="play1docker" https://raw.githubusercontent.com/synapplix/dockerfiles/master/play1docker/Dockerfile
 
 ### Usage
 
@@ -35,8 +35,10 @@ For a RICA System it is common to have a directory layout like:
     
 Create a rica volume container and copy the play, application dependend modules and application into it
 
-    docker create --volume /data --name rica ubuntu /bin/true 
-    docker run --rm --volumes-from rica -v $(pwd):/upload ubuntu cp -r /upload/play /upload/play-modules /upload/rica /data
+    docker create --volume /data --name rica play1docker /bin/true
+    docker cp $HOME/git/play rica:/data
+    docker cp $HOME/git/play-modules rica:/data
+    docker cp $HOME/git/rica rica:/data
     
 Execute some Play!1 maintanance scripts  on the volume container
 
@@ -55,3 +57,4 @@ Run/Start the application
 
 ### Link with database
 
+Please see the 'yabe-with-db' example in directory 'samples'.
