@@ -1,2 +1,2 @@
 # dockerfiles
-Collection of useful Dockerfile
+Collection of useful Dockerfiles
