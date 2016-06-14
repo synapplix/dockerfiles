@@ -1,5 +1,5 @@
 FROM play1docker
-RUN echo "deb mirror://mirrors.ubuntu.com/mirrors.txt yakkety universe" | tee /etc/apt/sources.list.d/groovy.list
+RUN echo "deb http://ftp.halifax.rwth-aachen.de/ubuntu/ yakkety universe" | tee /etc/apt/sources.list.d/groovy.list
 RUN { \
   echo 'Package: *'; \
   echo 'Pin: release a=yakkety'; \
