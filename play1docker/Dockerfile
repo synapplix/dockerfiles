@@ -4,8 +4,7 @@ FROM ubuntu:14.04
 # Install Python.
 # Install Java.
 RUN \
-  sed -i 's/http:\/\/archive.ubuntu.com\/ubuntu\//deb http:\/\/ftp.halifax.rwth-aachen.de\/ubuntu\//g' /etc/apt/sources.list && \
-  sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
+  apt-add-repository multiverse && \
   apt-get update && \
   apt-get -y upgrade && \
   apt-get install -y build-essential && \
