@@ -4,6 +4,8 @@ FROM ubuntu:14.04
 # Install Python.
 # Install Java.
 RUN \
+  apt-get update && \
+  apt-get -y upgrade && \
   apt-get install -y software-properties-common && \
   apt-add-repository multiverse && \
   apt-get update && \
