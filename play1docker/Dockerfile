@@ -10,8 +10,7 @@ RUN \
   apt-add-repository multiverse && \
   apt-get update && \
   apt-get -y upgrade && \
-  apt-get install -y build-essential && \
-  apt-get install -y byobu curl git htop man unzip vim wget && \
+  apt-get install -y build-essential byobu curl git htop man unzip vim wget && \
   apt-get install -y python python-dev python-pip python-virtualenv && \
   echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
   add-apt-repository -y ppa:webupd8team/java && \
